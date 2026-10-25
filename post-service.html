@@ -55,6 +55,7 @@ button{
 <p style="text-align:center;">
     <a href="index.html">← Back to Home</a>
 </p>
+    <form onsubmit="postService(event)">
 <input type="text" placeholder="Service Name">
 
 <select>
@@ -69,9 +70,19 @@ button{
 
 <input type="number" placeholder="Price (KES)">
 
-<button>Post Service</button>
+<button type="submit">Post Service</button>
+        </form>
 
 </div>
+<script>
+function postService(event) {
+    event.preventDefault();
+
+    alert("Service posted successfully!");
+
+    window.location.href = "index.html";
+}
+</script>
 
 </body>
 </html>
