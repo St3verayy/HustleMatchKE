@@ -82,6 +82,10 @@ function postService(event) {
     let category = document.getElementById("category").value;
     let description = document.getElementById("description").value;
     let price = document.getElementById("price").value;
+    localStorage.setItem("serviceName", serviceName);
+localStorage.setItem("category", category);
+localStorage.setItem("description", description);
+localStorage.setItem("price", price);
 
     alert(
         "Service Name: " + serviceName +
