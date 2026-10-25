@@ -143,6 +143,12 @@
             <h3>Tutoring</h3>
             <p>Academic support and mentorship.</p>
         </div>
+     <div class="card">
+    <h3 id="savedServiceName">My Latest Service</h3>
+    <p id="savedCategory">Category</p>
+    <p id="savedPrice">Price</p>
+</div>
+   
 
     </section>
 <section class="how-it-works">
@@ -177,5 +183,15 @@
     <p>© 2026 HustleMatchKE</p>
     <p>Connecting Students With Opportunities</p>
 </footer>
+    <script>
+document.getElementById("savedServiceName").innerText =
+    localStorage.getItem("serviceName") || "My Latest Service";
+
+document.getElementById("savedCategory").innerText =
+    localStorage.getItem("category") || "Category";
+
+document.getElementById("savedPrice").innerText =
+    "KES " + (localStorage.getItem("price") || "0");
+</script>
 </body>
 </html>
